@@ -1,3 +1,7 @@
-# Lama Dev AI Chat Bot App Starter Setup
+start pp :npm run dev 
 
-This template provides a minimal setup to get React 19 working in Vite with HMR and some ESLint rules.
+react router : https://reactrouter.com/en/main/start/overview
+    command : npm i -f react-router-dom
+
+layout : for common components
+
