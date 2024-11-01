@@ -7,15 +7,24 @@ import DashboardPage from './routes/dashboardPage/DashboardPage.jsx'
 import ChatPage from './routes/chatPage/ChatPage.jsx'
 import RootLayout from './layouts/rootLayout/RootLayout.jsx';
 import DashboardLayout from './layouts/dashboardLayout/DashboardLayout.jsx';
+import SignInPage from './routes/signInPage/SignInPage.jsx';
+import SignUpPage from './routes/signUpPage/SignUpPage.jsx';
 
 const router = createBrowserRouter([
   {
     element: <RootLayout/>, // common component header includes
     children:[
-      //homepge just hve heder as common component
       {
         path: "/",
-        element:<HomePage/>  
+        element:<HomePage/>  //homepge just hve heder as common component
+      },
+      {
+        path: "/sign-in/*",
+        element:<SignInPage/>
+      },
+      {
+        path: "/sign-up/*",
+        element:<SignUpPage/>
       },
 
       //common component menu br includes in DashboardLayout. and homepge don't hve menu bar
@@ -27,7 +36,7 @@ const router = createBrowserRouter([
             element:<DashboardPage/>
           },
           {
-            path:"/dashboard/chat/:id",
+            path:"/dashboard/chats/:id",
             element:<ChatPage/>
           }
         ]
