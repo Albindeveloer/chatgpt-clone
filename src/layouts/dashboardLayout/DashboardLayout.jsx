@@ -2,6 +2,7 @@ import { Outlet, useNavigate } from 'react-router-dom'
 import './dashboardLayout.css'
 import { useAuth } from '@clerk/clerk-react'
 import { useEffect } from 'react'
+import ChatList from '../../components/chatList/ChatList'
 
 const DashboardLayout = () => {
   //to protect routes ( why in dashboard layout? home pge should visible withut authentication, so we can't protect route in rootlayout)
@@ -20,7 +21,7 @@ const DashboardLayout = () => {
   
     // show dshbordlyout( dshbordpge, chtpge) if user signed in
   return (
-    <div className='dashboardLayout'><div className="menu">menu</div>
+    <div className='dashboardLayout'><div className="menu"><ChatList/></div>
     <div className="content">
       <Outlet />
     </div></div>
